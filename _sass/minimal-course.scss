@@ -5,9 +5,6 @@ body {
     padding-top: 4.5rem; // remove this line if using "navbar-fixed-top: false" in _config.yml
 }
 
-.container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
+
+
 @import "minimal-course/_syntax-highlighting";

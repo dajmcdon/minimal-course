@@ -6,6 +6,20 @@
 
 
 
+$font-family: {{ site.google_fonts | default:"Noto Sans, Helvetica, Arial, sans-serif" }};
+$theme-color: {{ site.theme-bg }};
+
+html { font-family: $font-family; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: $font-family; }
+body { font-family: $font-family;}
+
+p { 
+    a:not(.btn):link {color: $theme-color; }
+    a:visited {color: $theme-color; }
+    a:hover {color: $theme-color; text-decoration: none;}
+    a:active {color: $theme-color; }
+}
+
 
 
 

@@ -9,11 +9,3 @@ body {
 
 @import "minimal-course/_syntax-highlighting";
 
-$font-family: {{ site.google_fonts | default:"Noto Sans, Helvetica, Arial, sans-serif" }};
-$theme-color: {{ site.theme-bg }};
-
-html { font-family: $font-family; }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: $font-family; }
-body { font-family: $font-family;}
-
-p { a { all: unset; all: revert; color: $theme-color; }}

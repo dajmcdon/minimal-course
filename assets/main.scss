@@ -20,6 +20,15 @@ p {
     a:not(.btn):active {color: $theme-color; }
 }
 
+.container{
+    .li{
+	a:not(.btn):link {color: $theme-color; }
+	a:not(.btn):visited {color: $theme-color; }
+	a:not(.btn):hover {color: darken($theme-color, 20%); text-decoration: none;}
+	a:not(.btn):active {color: $theme-color; }
+    }
+}
+
 .license {
   text-align: center;
   font-size: small;

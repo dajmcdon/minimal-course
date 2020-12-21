@@ -39,13 +39,13 @@
         </div>
     </li>
     {% else %}
+        <li class="nav-item{{ current}}">
         {% if entry.url contains "http" %}
-            <li><a class="nav-link" href="{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a></li>
+            <a class="nav-link" href="{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
         {% else %}
-            <li class="nav-item{{ current }}">
-                <a class="nav-link" href="{{ site.baseurl }}{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
-            </li>
+            <a class="nav-link" href="{{ site.baseurl }}{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
         {% endif %}
+        </li>
     {% endif %}
 {% endfor %}                
 </ul>

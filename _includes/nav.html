@@ -22,7 +22,7 @@
 <ul class="navbar-nav ml-auto">
 {% for entry in site.navigation %}
     {% if entry.url == current_page %}
-        {% assign current = ' active' %}
+        {% assign current = 'active' %}
     {% else %}
         {% assign current = null %}
     {% endif %}
@@ -39,9 +39,13 @@
         </div>
     </li>
     {% else %}
-    <li class="nav-item{{ current }}">
-        <a class="nav-link" href="{{ site.baseurl }}{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
-    </li>
+        {% if entry.url contains "http" %}
+            <li><a class="nav-link" href="{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a></li>
+        {% else %}
+            <li class="nav-item{{ current }}">
+                <a class="nav-link" href="{{ site.baseurl }}{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
+            </li>
+        {% endif %}
     {% endif %}
 {% endfor %}                
 </ul>

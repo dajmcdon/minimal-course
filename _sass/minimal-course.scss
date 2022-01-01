@@ -5,8 +5,8 @@ body {
     padding-top: 4.5rem; // remove this line if using "navbar-fixed-top: false" in _config.yml
 }
 
-$font-family: {{ site.google_fonts | default:"Noto Sans, Helvetica, Arial, sans-serif" }};
-$theme-color: {{ site.theme-bg }};
+$font-family: "Montserrat, Noto Sans, Helvetica, Arial, sans-serif";
+$theme-color: rgb(64, 180, 229);
 
 html { font-family: $font-family; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: $font-family; }

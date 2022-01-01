@@ -14,15 +14,25 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: $f
 body { font-family: $font-family;}
 
 
-main, .license {
-  a:not(.btn), a:not(.btn):link, a:not(.btn):visited, a:not(.btn):active{
+main {
+  a, a:link, a:visited, a:active{
       color: $theme-color;
   }
+  a:hover {color: darken($theme-color, 20%); text-decoration: none;}
+}
 
-  a:not(.btn):hover {color: darken($theme-color, 20%); text-decoration: none;}
+/*
+a:not(.btn), a:not(.btn):link, a:not(.btn):visited, a:not(.btn):active{
+    color: $theme-color;
 }
 
 
+a:not(.btn):hover {color: darken($theme-color, 20%); text-decoration: none;}
+
+
+a.navbar-brand, a.navbar-brand:link, a.navbar-brand:visited, a.navbar-brand:active, a.navbar-brand:hover{color: inherit;}
+a.btn, a.btn:link, a.btn:visited, a.btn:active, a.btn:hover{color: white;}
+*/
 
 .license {
   text-align: center;

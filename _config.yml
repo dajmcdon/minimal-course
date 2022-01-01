@@ -17,7 +17,9 @@ author: Daniel J. McDonald
 author-url: https://dajmcdon.github.io/
 description: > # this means to ignore newlines until "baseurl:"
   The course website for UBC's Stat 550 - Statistical Consulting
-
+baseurl: "" # the subpath of your site, e.g. 
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
+lang: en # language can also be set on a per page basis. Primary use right now is only for <html lang="">
 
 # Build settings
 markdown: kramdown

@@ -11,40 +11,33 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Minimal course website
-email: your-email@domain.com
-author: Your Name
-author-url: https://www.yourpersonalurl.com/
+title: Stat 550 - W2021
+email: daniel@stat.ubc.ca
+author: Daniel J. McDonald
+author-url: https://dajmcdon.github.io/
 description: > # this means to ignore newlines until "baseurl:"
-  A simple mobile friendly navbar theme, intended for a course website
-baseurl: "" # the subpath of your site, e.g. 
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
-lang: en # language can also be set on a per page basis. Primary use right now is only for <html lang="">
+  The course website for UBC's Stat 550 - Statistical Consulting
+
 
 # Build settings
 markdown: kramdown
 theme: minimal-course
 permalink: /:title/
-navbar: light          # other options: dark
-theme-bg: rgb(64, 180, 229)
+navbar: dark          # other options: dark
+theme-bg: rgb(12, 127, 135)
 navbar-fixed-top: true # if true, also check _sass/bootstrap4-cdn.scss padding top
-logo_path: /assets/img/chart-bar-regular.svg # optional
+logo_path: /assets/img/american-sign-language-interpreting-solid.svg
 
 google_fonts: Montserrat
 
 use-license: true
 
 navigation:
-  - title: Home
-    url: /
   - title: Syllabus
-    url: /syllabus/
-  - title: About
-    url: /about/
-  - title: More tabs
-    url: /more/
-    sublinks:
-      - title: FAQ
-        url: /more/faq/
-      - title: Links
-        url: /more/links/
+    url: https://stat550-2021.github.io/syllabus/
+  - title: Schedule
+    url: https://stat550-2021.github.io/schedule/
+  - title: Github
+    url: https://github.com/stat550-2021/
+    icon: "fab fa-github"
+

@@ -2,41 +2,38 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minimal-course";
 
-.license {
-  text-align: center;
-  font-size: small;
-  /* border-top: 1px solid black; */
-  padding-top: 1em;
-  margin-top: 2em;
-}
 
-.container {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
+@import "bootstrap/functions"
 
-.center-img {
-    width: 90%;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
 
-h2, .h2 {
-    padding-top: 16px;
-}
+$font-family-base: {% if site.google_fonts %}{{ site.google_fonts }},{% endif %}$font-family-sans-serif;
 
-.license {
-    a, a:link, a:visited, a:active{color: $theme-color;}
-    a:hover {color: darken($theme-color, 20%); text-decoration: none;}
-}
 
-.footnotes {
-    font-size: 75%;
-}
+@import "minimal-course/syntax-highlighting";
+@import "bootstrap/variables"
+@import "bootstrap/mixins"
+@import "bootstrap/root"
+@import "bootstrap/reboot"
+@import "bootstrap/type"
+@import "bootstrap/images"
+@import "bootstrap/code"
+@import "bootstrap/grid"
+@import "bootstrap/tables"
+@import "bootstrap/buttons"
+@import "bootstrap/transitions"
+@import "bootstrap/button-group"
+@import "bootstrap/nav"
+@import "bootstrap/navbar"
+@import "bootstrap/breadcrumb"
+@import "bootstrap/pagination"
+@import "bootstrap/badge"
+@import "bootstrap/jumbotron"
+@import "bootstrap/alert"
+@import "bootstrap/utilities"
+@import "bootstrap/print"
 
+
+@import "minimal-course"
 
 

@@ -8,6 +8,7 @@ body {
 $font-family: "Montserrat, Noto Sans, Helvetica, Arial, sans-serif";
 $theme-color: rgb(64, 180, 229);
 
+/*
 html { font-family: $font-family; }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: $font-family; }
 body { font-family: $font-family;}
@@ -19,6 +20,7 @@ main {
   }
   a:hover {color: darken($theme-color, 20%); text-decoration: none;}
 }
+*/
 
 /*
 a:not(.btn), a:not(.btn):link, a:not(.btn):visited, a:not(.btn):active{
@@ -36,4 +38,4 @@ a.btn, a.btn:link, a.btn:visited, a.btn:active, a.btn:hover{color: white;}
 
 
 @import "minimal-course/_syntax-highlighting";
-
+@import "bootstrap/bootstrap"

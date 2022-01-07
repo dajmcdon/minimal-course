@@ -9,12 +9,8 @@
 
 $font-family-base: {% if site.google_fonts %}{{ site.google_fonts }}, {% endif %}-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-$primary: #6f42c1;
-$secondary: #fd7e14;
-/*
 $primary: {{ site.theme-primary }};
 $secondary: {{ site.theme-secondary }};
-*/
 
 @import "minimal-course/syntax-highlighting";
 @import "bootstrap/variables";

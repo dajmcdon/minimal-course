@@ -9,9 +9,9 @@
 {% endfor %}
 
 <nav class="navbar navbar-expand-lg navbar-{{ site.navbar }} {% if site.navbar-fixed-top %} fixed-top{% endif %}" style="background-color: {{ site.theme-primary }};">
-<a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}">
+<a class="navbar-brand" href="{{ site.url }}">
   {% if site.logo_path %}
-    <img src="{{ site.baseurl | append: site.logo_path }}" width="24" height="24" class="d-inline-block align-middle" style="margin-right: 3px" alt="">
+    <img src="{{ site.url | append: site.logo_path }}" width="24" height="24" class="d-inline-block align-middle" style="margin-right: 3px" alt="">
       {% endif %}
     {{ site.title }}</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,12 +29,12 @@
     {% assign sublinks = entry.sublinks %}
     {% if sublinks %}
     <li class="nav-item dropdown{{ current }}">
-        <a class="nav-link dropdown-toggle" href="{{ site.baseurl }}{{ entry.url }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="{{ entry.url | relative_url }}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="{{ entry.icon }}"></i> {{ entry.title }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for sublink in sublinks %}
-            <a class="dropdown-item" href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+            <a class="dropdown-item" href="{{ sublink.url | relative_url }}">{{ sublink.title }}</a>
             {% endfor %}
         </div>
     </li>
@@ -43,11 +43,11 @@
         {% if entry.url contains "http" %}
             <a class="nav-link" href="{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
         {% else %}
-            <a class="nav-link" href="{{ site.baseurl }}{{ entry.url }}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
+            <a class="nav-link" href="{{ entry.url | relative_url}}"><i class="{{ entry.icon }}"></i> {{ entry.title }}</a>
         {% endif %}
         </li>
     {% endif %}
-{% endfor %}                
+{% endfor %}
 </ul>
 </div>
 </nav>

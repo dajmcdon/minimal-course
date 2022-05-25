@@ -6,9 +6,13 @@
     {% include nav.html %}
     {% if site.navbar-fixed-top == false %}</div>{% endif %}
 
-    <main role="main" class="container" aria-label="Content">
-    {{ content }}
-    </main>
+    <div class="container-fluid">
+        <div class="row flex-xl-nowrap">
+            <main class="col-8 offset-md-2 offset-lg-2 offset-xl-2" role="main" aria-label="Content">
+                {{ content }}
+            </main>
+        </div>
+    </div>
 
     {% include footer.html %}
 </body>

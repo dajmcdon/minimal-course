@@ -5,35 +5,47 @@ body {
     padding-top: 4.5rem; // remove this line if using "navbar-fixed-top: false" in _config.yml
 }
 
-$font-family: "Montserrat, Noto Sans, Helvetica, Arial, sans-serif";
-$theme-color: rgb(64, 180, 229);
 
-html { font-family: $font-family; }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: $font-family; }
-body { font-family: $font-family;}
-
-
-main {
-  a, a:link, a:visited, a:active{
-      color: $theme-color;
-  }
-  a:hover {color: darken($theme-color, 20%); text-decoration: none;}
+.license {
+    text-align: center;
+    font-size: small;
+    /* border-top: 1px solid black; */
+    padding-top: 1em;
+    margin-top: 2em;
 }
 
 /*
-a:not(.btn), a:not(.btn):link, a:not(.btn):visited, a:not(.btn):active{
-    color: $theme-color;
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+*/
+
+.center-img {
+    width: 90%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h2, .h2 {
+    padding-top: 16px;
+}
+
+/*
+.license {
+    a, a:link, a:visited, a:active{color: $theme-color;}
+    a:hover {color: darken($theme-color, 20%); text-decoration: none;}
+}
+*/
+
+.footnotes {
+    font-size: 75%;
 }
 
 
-a:not(.btn):hover {color: darken($theme-color, 20%); text-decoration: none;}
-
-
-a.navbar-brand, a.navbar-brand:link, a.navbar-brand:visited, a.navbar-brand:active, a.navbar-brand:hover{color: inherit;}
-a.btn, a.btn:link, a.btn:visited, a.btn:active, a.btn:hover{color: white;}
-*/
-
-
-
-@import "minimal-course/_syntax-highlighting";
-
+a:hover, a:focus {
+    text-decoration: none;
+    color: $secondary;
+}
